@@ -1,0 +1,24 @@
+﻿@model MMMBuilds.ViewModels.MechListViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MMM Builds WWW</title>
+
+</head>
+<body>
+    <h1>@Model.CurrentCategory</h1>
+
+    @foreach(var mech in Model.Mechs)
+    {
+        <div>
+            <h2>@mech.Name</h2>
+            <h3>@mech.Price.ToString("c")</h3>
+            <h4>@mech.Category.CategoryName</h4>
+        </div>
+    }
+</body>
+</html>
