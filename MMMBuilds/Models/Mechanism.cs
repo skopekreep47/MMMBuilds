@@ -1,7 +1,10 @@
-﻿namespace MMMBuilds.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MMMBuilds.Models
 {
     public class Mechanism
     {
+        [Key]
         public int MechId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string? ShortDescription { get; set; }
