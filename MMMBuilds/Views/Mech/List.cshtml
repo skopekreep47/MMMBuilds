@@ -16,7 +16,7 @@
 
                     <div class="d-flex justify-content-between mt-2">
                         <h2 class="text-start">
-                            <a class="mech-link">@mech.Name</a>
+                            <a class="mech-link" asp-controller="Mech" asp-action="Details" asp-route-id="@mech.MechId">@mech.Name</a>
                         </h2>
                         <h5 class="text-nowrap">
                             @mech.Price.ToString("c")

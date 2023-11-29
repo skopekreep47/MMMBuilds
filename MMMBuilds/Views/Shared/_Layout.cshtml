@@ -11,9 +11,9 @@
 
 	    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
 	    <link href="~/css/site.css" rel="stylesheet" />
-        <base href="/" />
+        <base href="/" /> @* This will override the controller/view relative paths with the root of the app. *@
     </head>
-    <body>
+    <body id="mbw">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary"
                  aria-label="MMM Builds WWW navigation header">
@@ -28,8 +28,14 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        </ul>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Mech" asp-action="List" class="nav-link">Mechanisms</a>
+                        </li>
+                    </ul>
                     </div>
                 </div>
             </nav>

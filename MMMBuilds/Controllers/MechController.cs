@@ -17,9 +17,19 @@ namespace MMMBuilds.Controllers
 
         public IActionResult List()
         {
-            MechListViewModel mechListViewModel = new MechListViewModel(_mechRepository.AllMechs, "LEGO");
+            MechListViewModel mechListViewModel = new MechListViewModel(_mechRepository.AllMechs, "All Mechanisms");
 
             return View(mechListViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var mech = _mechRepository.GetMechById(id);
+            if (mech == null)
+            {
+                return NotFound();
+            }
+            return View(mech);
         }
     }
 }
