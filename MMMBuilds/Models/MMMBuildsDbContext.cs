@@ -8,5 +8,6 @@ namespace MMMBuilds.Models
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Mechanism> Mechs { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

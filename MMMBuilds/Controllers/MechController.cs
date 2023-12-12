@@ -15,11 +15,23 @@ namespace MMMBuilds.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public IActionResult List()
+        public ViewResult List(string category)
         {
-            MechListViewModel mechListViewModel = new MechListViewModel(_mechRepository.AllMechs, "All Mechanisms");
+            IEnumerable<Mechanism> mechs;
+            string? currentCategory;
 
-            return View(mechListViewModel);
+            if (string.IsNullOrEmpty(category))
+            {
+                mechs = _mechRepository.AllMechs.OrderBy(m => m.MechId);
+                currentCategory = "All Mechanisms";
+            }
+            else
+            {
+                mechs = _mechRepository.AllMechs.Where(m => m.Category.CategoryName == category).OrderBy(m => m.MechId);
+                currentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.CategoryName == category)?.CategoryName;
+            }
+            
+            return View(new MechListViewModel(mechs, currentCategory));
         }
 
         public IActionResult Details(int id)

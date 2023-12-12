@@ -1,0 +1,23 @@
+﻿@model Mechanism
+
+<div class="col">
+	<div class="card mech-card">
+		<img src="@Model.ImageThumbUrl" class="object-fit-scale border rounded" alt="@Model.Name">
+		<div class="card-body mech-button">
+			<h2>
+				<a asp-controller="Mech"
+					asp-action="Details"
+					asp-route-id="@Model.MechId"
+					class="mech-link">@Model.Name</a>
+			</h2>
+
+			<h5 class="text-nowrap">
+				@Model.Price.ToString("c")
+			</h5>
+
+			<h4>
+				<a class="btn btn-secondary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-mechId="@Model.MechId">Add Item</a>
+			</h4>
+		</div>
+	</div>
+</div>

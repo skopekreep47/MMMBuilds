@@ -1,4 +1,5 @@
 ﻿@charset "UTF-8";
+
 body {
     padding-top: 90px;
     font-family: "Work Sans", sans-serif;
@@ -40,53 +41,8 @@ h6, .h6 {
     background-color: #076ae1 !important;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-    color: #E5E5E5;
-}
-
-.nav-link.btn-link {
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #E5E5E5;
-}
-
-.nav-item {
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #E5E5E5;
-    margin-left: 20px;
-}
-
-.nav-item .dropdown-menu {
-    padding: 0px;
-    margin-top: 23px;
-}
-
-.nav-item .dropdown-item:hover, .nav-item .dropdown-item:focus {
-    color: #C87D52;
-}
-
-.nav-item.dropdown li {
-    background-color: #C87D52;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: 2px solid #FEF6F5;
-}
-
-.nav-item.dropdown li > a {
-    color: #E5E5E5;
-}
-
-.carousel-indicators {
-    justify-content: end;
-    margin-right: 3%;
-}
-
-.carousel-indicators button {
-    border-radius: 50%;
+.nav-link{
+    color:#ffffff;
 }
 
 .logo-mark {
@@ -113,16 +69,16 @@ h6, .h6 {
     border: none;
 }
 
+.mech-card img {
+    max-height: 10rem;
+}
+
 .card-body.mech-button {
     padding: 0px;
 }
 
 .mech-button > h4, .mech-button > .h4 {
     margin-bottom: 0px;
-}
-
-.mech-link {
-    text-decoration: none;
 }
 
 .header-line {
